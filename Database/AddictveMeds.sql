@@ -1,0 +1,1 @@
+SELECT p.idDoctor, COUNT(*) AS Dangerous_Prescriptions FROM Prescription p JOIN Medication m ON p.idMedication = m.idMedication WHERE name = "Valium" OR name = "oxycontin" GROUP BY p.idDoctor

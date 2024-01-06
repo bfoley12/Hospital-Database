@@ -1,0 +1,1 @@
+SELECT dept.name, COUNT(*) AS Num_Visits FROM visit_has_doctor vhd JOIN doctor d ON vhd.idDoctor = d.SSN JOIN department dept ON d.idDepartment = dept.idDepartment JOIN visit v ON v.idVisit = vhd.idVisit WHERE start_date BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()GROUP BY dept.name

@@ -1,0 +1,1 @@
+SELECT idBed, Bed_Room_Floor, Bed_Room_Number, SUM(DATEDIFF(IF(isnull(end_date), CURDATE(), end_date), start_date) + 1)/30 AS Occupied_Time FROM visit WHERE start_date BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE() GROUP BY idBed, Bed_Room_Floor, Bed_Room_Number;

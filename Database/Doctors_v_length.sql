@@ -1,0 +1,1 @@
+SELECT v.idVisit, v.idPatient, COUNT(*)/SUM(DATEDIFF(IF(isnull(end_date), CURDATE(), end_date), start_date) + 1) AS Doctors_v_length FROM visit v JOIN visit_has_doctor vhd ON v.idVisit = vhd.idVisit GROUP BY v.idVisit, v.idPatient

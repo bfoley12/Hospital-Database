@@ -1,0 +1,1 @@
+SELECT idPatient, COUNT(*) AS Num_Visits FROM visit GROUP BY idPatient Order By Num_Visits DESC;

@@ -1,0 +1,1 @@
+SELECT v.idVisit, COUNT(*) AS Num_Doctors FROM visit v JOIN visit_has_doctor vhd ON v.idVisit = vhd.idVisit GROUP BY v.idVisit ORDER BY Num_Doctors DESC
